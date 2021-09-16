@@ -1,4 +1,4 @@
-# adducodev2
+# AddUCode
 
 ## Project setup
 ```
