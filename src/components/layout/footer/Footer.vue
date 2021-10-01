@@ -1,7 +1,7 @@
 <template>
     <div id="footer" class="footer">
         <div class="footer__wrapper">
-            <add-button :to="{ name: 'Home' }" title="AddUCode" gold-btn class="footer__logo"></add-button>
+            <add-button :to="{ name: 'Home' }" title="AddUCode" blue-btn class="footer__logo"></add-button>
             <div class="footer__social-wrapper">
                 <a href="https://github.com/Adducode/AddUCode" target="_blank" class="footer__social-github">
                     <img src="../../../assets/icons/github.svg" alt="github icon" class="footer__social-icon">
@@ -15,20 +15,20 @@
             </div>
             <div class="footer__column-wrapper">
                 <div class="footer__first-column">
-                    <add-button :to="{ name: 'Applications' }" title="Apps" gold-btn></add-button>
-                    <add-button :to="{ name: 'Projects' }" title="Projects" gold-btn></add-button>
-                    <add-button :to="{ name: 'About' }" title="About me / CV" gold-btn></add-button>
+                    <add-button :to="{ name: 'Applications' }" title="Apps" blue-btn></add-button>
+                    <add-button :to="{ name: 'Projects' }" title="Projects" blue-btn></add-button>
+                    <add-button :to="{ name: 'About' }" title="About me / CV" blue-btn></add-button>
                 </div>
                 <div class="footer__second-column">
-                    <add-button :to="{ name: 'Contact' }" title="Contact" gold-btn></add-button>
-                    <add-button :to="{ name: 'Options' }" title="Options" gold-btn></add-button>
+                    <add-button :to="{ name: 'Contact' }" title="Contact" blue-btn></add-button>
+                    <add-button :to="{ name: 'Options' }" title="Options" blue-btn></add-button>
                 </div>
             </div>
             <div class="footer__contact-wrapper">
                 <a href="tel:+48792320103" class="footer__contact-phone">
                     <img src="../../../assets/icons/phone.svg" alt="phone" class="footer__social-icon footer__social-icon--width"> 792 320 103
                 </a>
-                <a href="mailto:mateusz.kraska.95@gmail.com?subject=AdduEmail:" class="footer__contact-email">
+                <a href="mailto:mateusz.kraska.95@gmail.com?subject=AdduEmail" class="footer__contact-email">
                     <img src="../../../assets/icons/email.svg" alt="email" class="footer__social-icon footer__social-icon--width"> mateusz.kraska.95@gmail.com
                 </a>
             </div>
@@ -55,8 +55,8 @@ export default {
     font-size: 18px;
     font-family: $font-fredricka;
     padding: 30px 10px 20px;
-    background-color: $gold-color-500;
-    background-image: linear-gradient(315deg, $black-color-900 0%, $gold-color-500 74%);
+    background-color: $blue-color-400;
+    background-image: linear-gradient(315deg, $white-color-100 0%, $blue-color-400 74%);
 
     @include media-breakpoint-up(md) {
         padding: 50px 10px 30px;
@@ -81,6 +81,7 @@ export default {
     &__logo {
         font-family: $font-wind-song;
         font-size: 20px;
+        color: $white-color-100;
         display: flex;
         justify-content: center;
 
@@ -100,13 +101,17 @@ export default {
         @include media-breakpoint-up(xxl) {
             margin: 30px 200px 0 auto;
         }
+
+        &:hover {
+            color: $white-color-100;
+        }
     }
 
     &__social-wrapper {
         display: flex;
         justify-content: center;
         margin: 20px 0;
-        min-height: 25px;
+        min-height: 26px;
 
         @include media-breakpoint-up(md) {
             flex-direction: column;
@@ -116,10 +121,12 @@ export default {
 
         @include media-breakpoint-up(lg) {
             margin: 0 0 0 auto;
+            padding-left: 20px;
         }
 
         @include media-breakpoint-up(xl) {
             margin: 0;
+            padding-left: 0;
         }
 
         a:nth-child(1) {
@@ -170,11 +177,23 @@ export default {
             background-repeat: no-repeat;
             display: flex;
             align-items: baseline;
-            margin-top: 5px;
+            margin-top: 6px;
 
             @include media-breakpoint-up(md) {
-                margin-top: 5px;
-                margin-bottom: -5px !important;
+                margin-top: 6px;
+                margin-bottom: -6px !important;
+            }
+        }
+
+        img {
+            margin-top: -1px;
+
+            @include media-breakpoint-up(md) {
+                margin-top: 0;
+            }
+
+            @include media-breakpoint-up(lg) {
+                margin-top: -1px;
             }
         }
     }
@@ -192,10 +211,10 @@ export default {
             background-size: 20px;
             display: flex;
             align-items: baseline;
-            margin-top: 4px;
+            margin-top: 5px;
 
             @include media-breakpoint-up(md) {
-                margin-top: 4px;
+                margin-top: 15px !important;
                 margin-bottom: -4px !important;
             }
         }
@@ -275,7 +294,7 @@ export default {
             }
 
             &:hover:after {
-                content: url("../../../assets/icons/star.svg");
+                content: url("../../../assets/icons/star-blue.svg");
                 position: absolute;
                 width: 23px;
                 height: 23px;
@@ -288,7 +307,7 @@ export default {
             }
 
             &:hover:before {
-                content: url("../../../assets/icons/star.svg");
+                content: url("../../../assets/icons/star-blue.svg");
                 position: absolute;
                 width: 23px;
                 height: 23px;
@@ -333,15 +352,15 @@ export default {
         align-items: center;
         text-decoration: none;
         height: 20px;
-        color: $gold-color-400;
+        color: $blue-color-500;
         transition: background-image 0.1s;
 
         &:hover {
-            background-image: url("../../../assets/icons/phone-color.svg");
+            background-image: url("../../../assets/icons/phone-color-blue.svg");
             background-repeat: no-repeat;
             background-size: 20px;
             display: flex;
-            color: $gold-color-400;
+            color: $blue-color-500;
 
             .footer__social-icon {
                 opacity: 0;
@@ -354,7 +373,7 @@ export default {
         align-items: center;
         height: 20px;
         text-decoration: none;
-        color: $gold-color-400;
+        color: $blue-color-500;
         margin-top: 10px;
         transition: background-image 0.1s;
 
@@ -369,11 +388,11 @@ export default {
         }
 
         &:hover {
-            background-image: url("../../../assets/icons/email-color.svg");
+            background-image: url("../../../assets/icons/email-color-blue.svg");
             background-repeat: no-repeat;
             background-size: 20px;
             display: flex;
-            color: $gold-color-400;
+            color: $blue-color-500;
 
             .footer__social-icon {
                 opacity: 0;
@@ -384,7 +403,7 @@ export default {
     &__copyright {
         font-size: 14px;
         text-align: center;
-        color: $gold-color-400;
+        color: $blue-color-500;
         margin-top: 20px;
     }
 }

@@ -35,10 +35,10 @@ export default {
 .contact {
     display: flex;
     flex-direction: column;
-    background-color: $gold-color-500;
-    background-image: linear-gradient(315deg, $gold-color-500 0%, $black-color-900 15%);
+    background-color: $blue-color-400;
+    background-image: linear-gradient(315deg, $blue-color-400 0%, $white-color-100 15%);
     padding: 50px 10px;
-    color: $gold-color-400;
+    color: $blue-color-500;
 
     @include media-breakpoint-up(sm) {
         padding: 70px 10px;
@@ -90,15 +90,14 @@ export default {
         align-items: center;
         text-decoration: none;
         height: 20px;
-        color: $gold-color-400;
+        color: $blue-color-500;
         transition: background-image 0.1s;
 
         &:hover {
-            background-image: url("../assets/icons/phone-color.svg");
+            background-image: url("../assets/icons/phone-color-blue.svg");
             background-repeat: no-repeat;
             background-size: 20px;
             display: flex;
-            color: $gold-color-400;
 
             .contact__social-icon {
                 opacity: 0;
@@ -112,7 +111,7 @@ export default {
         text-align: center;
         height: 20px;
         text-decoration: none;
-        color: $gold-color-400;
+        color: $blue-color-500;
         margin-top: 20px;
         transition: background-image 0.1s;
 
@@ -123,11 +122,10 @@ export default {
         }
 
         &:hover {
-            background-image: url("../assets/icons/email-color.svg");
+            background-image: url("../assets/icons/email-color-blue.svg");
             background-repeat: no-repeat;
             background-size: 20px;
             display: flex;
-            color: $gold-color-400;
 
             .contact__social-icon {
                 opacity: 0;
@@ -138,12 +136,12 @@ export default {
     &__address {
         margin-top: 20px;
         text-align: center;
-        color: $gold-color-400;
+        color: $blue-color-500;
         text-decoration: none;
         transition: opacity 0.3s;
 
         &:hover {
-            color: $gold-color-400;
+            color: $blue-color-500;
             opacity: 0.5;
         }
     }

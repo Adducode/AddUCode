@@ -1,25 +1,26 @@
 <template>
     <div id="header" class="header">
-        <add-button :to="{ name: 'Home' }" title="AddUCode" gold-btn class="header__logo"></add-button>
+        <add-button :to="{ name: 'Home' }" title="AddUCode" blue-btn class="header__logo"></add-button>
         <div class="header__mobile-menu-wrapper" @click="toggleMenu" :class="{ 'active-bar-icon': getIsMenuActive }">
             <div class="header__mobile-menu"></div>
         </div>
         <div class="header__links" :class="{ 'active': getIsMenuActive }">
             <div :class="['active-exit', { 'active-close': getIsMenuActive }]">
-                <add-button :to="{ name: 'Home' }" title="AddUCode" gold-btn class="header__logo" @click="closeMenu"></add-button>
+                <add-button :to="{ name: 'Home' }" title="AddUCode" blue-btn class="header__logo" @click.native="closeMenu"></add-button>
                 <div
                     class="header__close-menu"
                     @click="toggleMenu"
                 >
-                    <img src="../../../assets/icons/close.svg" alt="close menu icon">
+                    <img class="header__close-icon" src="../../../assets/icons/close-blue.svg" alt="close menu icon">
+                    <img class="header__close-icon--dark-mode" src="../../../assets/icons/close.svg" alt="close menu icon">
                 </div>
             </div>
             <div class="header__links-wrapper">
-                <add-button :to="{ name: 'Applications' }" title="Apps" gold-btn @click="closeMenu"></add-button>
-                <add-button :to="{ name: 'Projects' }" title="Projects" gold-btn @click="closeMenu"></add-button>
-                <add-button :to="{ name: 'About' }" title="About me / CV" gold-btn @click="closeMenu"></add-button>
-                <add-button :to="{ name: 'Contact' }" title="Contact" gold-btn @click="closeMenu"></add-button>
-                <add-button :to="{ name: 'Options' }" title="Options" gold-btn @click="closeMenu"></add-button>
+                <add-button :to="{ name: 'Applications' }" title="Apps" blue-btn @click.native="closeMenu"></add-button>
+                <add-button :to="{ name: 'Projects' }" title="Projects" blue-btn @click.native="closeMenu"></add-button>
+                <add-button :to="{ name: 'About' }" title="About me / CV" blue-btn @click.native="closeMenu"></add-button>
+                <add-button :to="{ name: 'Contact' }" title="Contact" blue-btn @click.native="closeMenu"></add-button>
+                <add-button :to="{ name: 'Options' }" title="Options" blue-btn @click.native="closeMenu"></add-button>
             </div>
             <div class="header__social-wrapper">
                 <a href="https://github.com/Adducode/AddUCode" @click="closeMenu" target="_blank" class="header__social-github">
@@ -74,8 +75,8 @@ export default {
     align-items: center;
     justify-content: space-between;
     padding: 20px 10px;
-    background-color: $gold-color-500;
-    background-image: linear-gradient(315deg, $gold-color-500 0%, $black-color-900 74%);
+    background-color: $blue-color-400;
+    background-image: linear-gradient(315deg, $blue-color-400 0%, $white-color-100 74%);
 
     @include media-breakpoint-up(md) {
         padding: 0 10px;
@@ -109,6 +110,10 @@ export default {
         animation: rotate 0.5s;
         transition: opacity 0.3s;
 
+        @include media-breakpoint-up(md) {
+            display: none;
+        }
+
         &:hover {
             opacity: 0.5;
         }
@@ -118,8 +123,8 @@ export default {
         height: 5px;
         width: 30px;
         border-radius: 3px;
-        background-color: $black-color-900;
-        background-image: linear-gradient(315deg, $black-color-900 30%, $gold-color-500 100%);
+        background-color: $white-color-100;
+        background-image: linear-gradient(315deg, $white-color-100 30%, $blue-color-400 100%);
         position: relative;
 
         @include media-breakpoint-up(md) {
@@ -195,7 +200,7 @@ export default {
                 left: 20px;
                 margin-top: 13px;
                 height: 2px;
-                background-color: $gold-color-400;
+                background-color: $blue-color-400;
 
                 @include media-breakpoint-up(sm) {
                     width: 100px;
@@ -213,7 +218,7 @@ export default {
                 right: 20px;
                 margin-top: 13px;
                 height: 2px;
-                background-color: $gold-color-400;
+                background-color: $blue-color-400;
 
                 @include media-breakpoint-up(sm) {
                     width: 100px;
@@ -254,8 +259,8 @@ export default {
         width: 97%;
         padding: 15px 10px;
         border-radius: 15px;
-        background-color: $gold-color-500;
-        background-image: linear-gradient(315deg, $gold-color-500 0%, $black-color-900 74%);
+        background-color: $blue-color-400;
+        background-image: linear-gradient(315deg, $blue-color-400 0%, $white-color-100 74%);
     }
 
     .active-exit {
@@ -285,7 +290,7 @@ export default {
     }
 
     &__close-menu {
-        color: $gold-color-400;
+        color: $blue-color-400;
         width: 16px;
         height: 32px;
         cursor: pointer;
@@ -294,6 +299,12 @@ export default {
 
         &:hover {
             opacity: 0.5;
+        }
+    }
+
+    &__close-icon {
+        &--dark-mode {
+            display: none;
         }
     }
 
@@ -385,7 +396,7 @@ export default {
             background-size: 20px;
             display: flex;
             align-items: baseline;
-            margin-top: 4px;
+            margin-top: 5px;
         }
     }
 

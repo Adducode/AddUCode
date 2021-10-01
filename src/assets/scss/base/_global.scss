@@ -14,3 +14,8 @@ body {
 h1,h2,h3,h4 {
     font-weight: 700;
 }
+
+*::selection {
+    background-color: $blue-color-400;
+    color: $white-color-100;
+}
