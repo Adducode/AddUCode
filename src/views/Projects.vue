@@ -36,10 +36,10 @@ export default {
 .projects {
     display: flex;
     flex-direction: column;
-    background-color: $gold-color-500;
-    background-image: linear-gradient(315deg, $gold-color-500 0%, $black-color-900 15%);
+    background-color: $blue-color-400;
+    background-image: linear-gradient(315deg, $blue-color-400 0%, $white-color-100 15%);
     padding: 20px 10px;
-    color: $gold-color-400;
+    color: $blue-color-500;
 
     @include media-breakpoint-up(md) {
         padding: 40px 10px;
@@ -91,7 +91,7 @@ export default {
     }
 
     &__link {
-        color: $gold-color-400;
+        color: $blue-color-500;
         text-decoration: none;
         margin-top: 10px;
         position: relative;
@@ -104,8 +104,8 @@ export default {
 
         &:hover {
             opacity: 0.5;
-            color: $gold-color-400;
-            box-shadow: -40px 0 60px $white-color-100;
+            color: $blue-color-500;
+            box-shadow: -40px 0 60px $blue-color-500;
             border-radius: 8px;
         }
 
@@ -114,11 +114,11 @@ export default {
             position: absolute;
             right: -40px;
             top: 0;
-            color: $gold-color-400;
+            color: $blue-color-500;
         }
 
         &:after {
-            content: url("../assets/icons/left-arrow.svg");
+            content: url("../assets/icons/left-arrow-blue.svg");
             width: 12px;
             height: 12px;
             position: absolute;

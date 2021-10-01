@@ -59,14 +59,14 @@ export default {
 
 .home {
     font-family: $font-fredricka;
-    background-color: $gold-color-500;
-    background-image: linear-gradient(315deg, $gold-color-500 0%, $black-color-900 15%);
+    background-color: $blue-color-400;
+    background-image: linear-gradient(315deg, $blue-color-400 0%, $white-color-100 15%);
     padding: 20px 10px;
     display: flex;
     flex-direction: column;
 
     &__title {
-        color: $gold-color-400;
+        color: $blue-color-500;
         text-align: center;
         margin: 10px 0 30px;
 

@@ -5,7 +5,7 @@
         class="add-btn"
         :class="[{
             'add-btn--link': to,
-            'add-btn--yellow': goldBtn,
+            'add-btn--blue': blueBtn,
         }]"
     >{{ title }}
     </component>
@@ -22,7 +22,7 @@ export default {
         title: {
             type: String
         },
-        goldBtn: {
+        blueBtn: {
             type: Boolean
         }
     },
@@ -53,11 +53,11 @@ export default {
         text-decoration: none;
     }
 
-    &--yellow {
-        color: $gold-color-400;
+    &--blue {
+        color: $blue-color-500;
 
         &:hover {
-            color: $gold-color-400;
+            color: $blue-color-500;
         }
     }
 }

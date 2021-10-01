@@ -58,7 +58,7 @@ export default {
         width: 100%;
         height: 500px;
         border-radius: 20px;
-        box-shadow: 0 0 35px $white-color-100;
+        box-shadow: 0 0 35px $black-color-900;
 
         @include media-breakpoint-up(sm) {
             width: 80%;
@@ -139,12 +139,12 @@ export default {
     }
 
     &__btn {
-        color: $gold-color-400;
-        background-color: $black-color-800;
+        color: $blue-color-500;
+        background-color: $white-color-200;
         position: relative;
         width: 35%;
         padding: 10px;
-        box-shadow: 0 0 80px $white-color-100;
+        box-shadow: 0 0 80px $blue-color-500;
         margin: 25px auto 10px;
         border-radius: 5px;
         text-align: center;
@@ -174,9 +174,9 @@ export default {
 
         &:hover {
             opacity: 1;
-            background-color: $white-color-100;
+            background-color: $blue-color-500 !important;
             width: 98%;
-            color: $black-color-900;
+            color: $white-color-100 !important;
 
             @include media-breakpoint-up(sm) {
                 width: 80%;
@@ -208,23 +208,21 @@ export default {
         }
 
         &:before {
-            content: url("../../assets/icons/right-arrow.svg");
+            content: url("../../assets/icons/right-arrow-blue.svg");
             width: 12px;
             height: 12px;
             position: absolute;
             left: -20px;
             top: 13px;
-            color: $gold-color-400;
         }
 
         &:after {
-            content: url("../../assets/icons/left-arrow.svg");
+            content: url("../../assets/icons/left-arrow-blue.svg");
             width: 12px;
             height: 12px;
             position: absolute;
             right: -20px;
             top: 13px;
-            color: $gold-color-400;
 
             @include media-breakpoint-up(md) {
                 display: none;
@@ -233,7 +231,7 @@ export default {
     }
 
     &__description {
-        color: $gold-color-400;
+        color: $blue-color-500;
 
         @include media-breakpoint-only(sm) {
             width: 80%;
